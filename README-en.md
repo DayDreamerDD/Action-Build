@@ -19,7 +19,7 @@ Prohibit the promotion of forked repositories with **no modifications**; see [LI
   <img src="https://github.com/Numbersf/Action-Build/blob/BakaSU/pic/start.gif" width="500"/>
   <img src="https://github.com/Numbersf/Action-Build/blob/BakaSU/pic/start(2).png" width="500"/>
 </p>
-<summary>Please note, if you want to use other branch manager projects, make sure to disable 'Copy the SukiSU-Ultra branch only' when forking.</summary>
+<summary>Please note, if you want to use other branch manager projects, make sure to disable 'Copy the SukiSU-Nova branch only' when forking.</summary>
 </details>
  
 <details>
@@ -93,6 +93,8 @@ Prohibit the promotion of forked repositories with **no modifications**; see [LI
 # Changelog
 > Minor updates will be ignored. For more details, please refer to the commit.
  
+- Add `SusfsCompat.kts` to handle susfs compatibility issues and `SusfsContext.kts` to automatically handle `susfs` context mismatch exceptions.  
+ 
 - Added `FakeConfig(HideConfig)` to hide the visibility of config options in `proc/config.gz`.  
 ```
 Regular config option:
@@ -100,8 +102,6 @@ set_config "CONFIG_IP_NF_TARGET_ECN=y"
 Hidden config option:
 set_hide_config "CONFIG_IP6_NF_NAT=y"
 ```  
- 
-- Added `FakePatch` to improve compatibility between multiple kernel sublevel and `susfs`.  
  
 - Added path recursion, providing full support for `Rust` build logic and `bindgen`/`Kleaf` dependency resolution on kernel version `6.12+`.  
  
